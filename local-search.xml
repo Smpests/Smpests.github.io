@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>CentOS 7 yum源更换至阿里镜像源</title>
+    <link href="/2024/10/10/CentOS_7_change_yum_origin/"/>
+    <url>/2024/10/10/CentOS_7_change_yum_origin/</url>
+    
+    <content type="html"><![CDATA[<h1 id="CentOS-7-yum源更换至阿里镜像源"><a href="#CentOS-7-yum源更换至阿里镜像源" class="headerlink" title="CentOS 7: yum源更换至阿里镜像源"></a>CentOS 7: yum源更换至阿里镜像源</h1><ul><li>备份原<code>mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</code></li><li>下载CentOS 7的repo文件<code>wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></li><li>处理缓存<ul><li>先清除<code>yum clean all</code></li><li>重新生成<code>yum makecache</code></li></ul></li><li>yum更新<code>yum update</code></li></ul><blockquote><p>（可选）<code>vim  /etc/yum.repos.d/CentOS-Base.repo </code>，将<code>http</code>均改为<code>https</code></p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>system</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CentOS 7 安装Node.js及相关配置</title>
+    <link href="/2024/10/10/CentOS_7_install_nodejs/"/>
+    <url>/2024/10/10/CentOS_7_install_nodejs/</url>
+    
+    <content type="html"><![CDATA[<h1 id="CentOS-7安装Node-js及相关配置"><a href="#CentOS-7安装Node-js及相关配置" class="headerlink" title="CentOS 7安装Node.js及相关配置"></a>CentOS 7安装Node.js及相关配置</h1><ul><li><code>yum update</code></li><li><code>yum install nodejs -y</code></li><li>检查node版本<code>node -v</code></li><li>检查npm版本<code>npm -v</code></li><li>设置淘宝镜像加速<code>npm config set registry https://registry.npmmirror.com</code></li><li>cnpm设置<code>npm install -g cnpm --registry=https://registry.npmmirror.com</code></li></ul><p><img src="/img/2024-10-10_005356.png" alt="result"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Node</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2024/10/10/hello-world/"/>
     <url>/2024/10/10/hello-world/</url>
